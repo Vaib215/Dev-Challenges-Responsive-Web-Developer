@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&family=Poppins:wght@400;600&display=swap");
+:root {
+  --ff-1: "Poppins", sans-serif;
+  --ff-2: "PT Serif", serif;
+  --clr-black: #000;
+}
+
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  margin: 7% 13%;
+  font-family: var(--ff-1);
+  background: #fafafa;
+}
+
+h1,
+.designation {
+  font-family: var(--ff-2);
+}
+
+.head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.head .about p {
+  max-width: 24em;
+  margin-top: 1em;
+}
+
+.team {
+  margin-top: 4em;
+  margin-bottom: 6em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+  gap: 4em;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.team .member {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 4em;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.team .member p {
+  -webkit-transform: rotate(90deg) translateX(125px) translateY(-130px);
+          transform: rotate(90deg) translateX(125px) translateY(-130px);
+}
+
+.team .member img {
+  width: 14em;
+  margin-bottom: 1em;
+}
+
+.team .pc {
+  -webkit-transform: translateY(25%);
+          transform: translateY(25%);
+}
+
+@media (max-width: 768px) {
+  body {
+    margin: 15% 3%;
+  }
+  body .head {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body .head .about p {
+    margin-top: 2em;
+  }
+  body .team {
+    gap: 0.25em;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  body .team .pc {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+  body .team .mob {
+    -webkit-transform: translateY(25%);
+            transform: translateY(25%);
+  }
+  body .team .member img {
+    width: 8em;
+  }
+  body .team .member p {
+    -webkit-transform: rotate(90deg) translateX(80px) translateY(-75px);
+            transform: rotate(90deg) translateX(80px) translateY(-75px);
+  }
+}
+/*# sourceMappingURL=style.css.map */
