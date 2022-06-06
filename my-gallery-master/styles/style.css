@@ -29,6 +29,7 @@ body {
 }
 
 #profile {
+  text-align: center;
   margin: 2em 0 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -191,6 +192,20 @@ body {
   }
   #images img {
     border-radius: 0.5rem;
+  }
+}
+
+@media (max-width: 320px) {
+  #profile .cards {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 0.25em;
+  }
+  #images {
+    margin: 0.25em;
   }
 }
 /*# sourceMappingURL=style.css.map */
