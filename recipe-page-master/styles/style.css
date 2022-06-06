@@ -1,0 +1,272 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,700;1,500&family=Playfair+Display:ital,wght@0,700;1,400&display=swap");
+:root {
+  --ff-1: "Montserrat", sans-serif;
+  --ff-2: "Playfair Display", serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.material-symbols-rounded {
+  color: #4f4f4f;
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+}
+
+.orange {
+  color: #f2994a;
+  font-variation-settings: "FILL" 1;
+}
+
+body {
+  margin: 2em 8em;
+  font-family: var(--ff-1);
+}
+
+.dish-img {
+  width: 100%;
+}
+
+#dish {
+  margin: 1em 0;
+}
+
+#dish h1.title {
+  margin: 1em 0 0;
+  font-family: var(--ff-2);
+  font-size: 48px;
+}
+
+#dish .description {
+  margin: 2em 0;
+  color: #4f4f4f;
+  width: 65%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1em;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+#dish .description img {
+  padding: 0.25em;
+}
+
+#about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 2em;
+}
+
+#about .stats {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1em;
+  width: 14em;
+  margin: 2em 0;
+  padding: 2em 0.25em;
+  border: 2px solid transparent;
+  border-radius: 0.3em;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  -webkit-box-shadow: -2px -2px 8px 4px #bdbdbd;
+          box-shadow: -2px -2px 8px 4px #bdbdbd;
+}
+
+#about .stats .time-stats {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1em;
+}
+
+#about .stats .servings {
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#about .stats .card {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1em;
+}
+
+#about .stats .card small {
+  color: #7a7a7a;
+}
+
+#about .stats .card p {
+  width: 100%;
+  margin-top: 0.25em;
+  font-weight: 500;
+}
+
+#about > div {
+  width: 90%;
+}
+
+#about h2 {
+  font-family: var(--ff-2);
+  margin: 1em 0;
+}
+
+#about #ingredients .ingre .ingreem {
+  font-family: var(--ff-2);
+  display: block;
+  margin: 2em 0;
+}
+
+#about #ingredients .ingre .check {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 1em;
+  margin: 1em 0;
+}
+
+#about #ingredients .ingre .check p {
+  width: 100%;
+}
+
+ol {
+  list-style: none;
+}
+
+ol li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  gap: 1em;
+  margin-top: 0.5em;
+}
+
+ol li .no {
+  background: #F2994A;
+  color: white;
+  font-weight: 700;
+  font-family: var(--ff-2);
+  width: 1.5em;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  font-size: 1.5em;
+  padding: 0.2em 0.3em 0.4em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 5px;
+}
+
+ol li .text {
+  width: 100%;
+  line-height: 1.5;
+}
+
+input {
+  width: 2em;
+  height: 2em;
+}
+
+@media (max-width: 768px) {
+  body {
+    margin: 0;
+    overflow-x: hidden;
+    padding: 0 0.25em 0 0;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  #dish h1.title {
+    font-size: 36px;
+  }
+  #dish .description {
+    width: 100%;
+  }
+  #about {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #about > div {
+    width: 100%;
+  }
+  #about .stats {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    border: 0;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  #about .stats .servings {
+    -ms-flex-line-pack: start;
+        align-content: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    width: 100%;
+  }
+  #about .stats .time-stats {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+  }
+}
+/*# sourceMappingURL=style.css.map */
