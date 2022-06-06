@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@0,600;&display=swap");
+
+:root {
+  // Colors
+  --clr-dark: #4e5150;
+  --clr-place: #a9a9a9;
+  --clr-title: #bdbdbd;
+  --clr-card-bg: #e5e5e5;
+}
+
+body {
+  font-family: "Montessarat", sans-serif;
+  font-weight: 600;
+  color: var(--clr-dark);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+#profile {
+    margin: 2em 0 0;
+  display: flex;
+  flex-direction: column;
+  .avatar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    img {
+      margin: 0.25rem;
+      width: 8rem;
+      border-radius: 1rem;
+    }
+    #name {
+      font-size: 24px;
+      margin: 0.25em 0;
+    }
+    #place {
+      font-size: 14px;
+      color: var(--clr-place);
+    }
+  }
+  .cards {
+    display: flex;
+    gap: 1.5rem;
+    margin: 1rem;
+    .card {
+      background: var(--clr-card-bg);
+      width: 6rem;
+      padding: 1em 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border-radius: 0.75rem;
+      &__title {
+        font-size: 12px;
+        color: var(--clr-title);
+      }
+    }
+  }
+}
+
+#images {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 2em 6rem;
+  img {
+    border-radius: 1rem;
+  }
+  .flex {
+    display: flex;
+    gap: 1rem;
+  }
+  #row1 {
+    img:nth-child(1) {
+      width: 30%;
+    }
+    img:nth-child(2) {
+      width: 70%;
+    }
+  }
+  #row2 {
+    width: 100%;
+    #row3 {
+      width: 70%;
+      flex-direction: column;
+      #row4 img {
+        width: 100%;
+      }
+      #row5 {
+        margin-right: 1rem;
+        img {
+          width: 50%;
+        }
+      }
+    }
+    #row6 {
+      width: 30%;
+      margin-right: -1rem;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 420px) {
+  #profile {
+    .avatar img {
+      width: 6rem;
+    }
+    .avatar #name {
+      font-size: 16px;
+    }
+    .avatar #place {
+      font-size: 8px;
+    }
+    .cards {
+      gap: 0rem;
+      .card {
+        transform: scale(0.75);
+        margin: -0.5rem;
+      }
+    }
+  }
+  #images{
+    margin: 1.25em;
+  }
+  #images,#images .flex {
+      gap: 0.25em;
+  }
+  #images img{
+      border-radius: 0.5rem
+  }
+}
