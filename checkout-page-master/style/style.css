@@ -1,0 +1,302 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@0,600;&display=swap");
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+:root {
+  --clr-title: #4e5150;
+  --clr-label: #4f4f4f;
+  --clr-text: #333333;
+  --clr-card: #f2f2f2;
+}
+
+body {
+  font-family: "Montessarat", sans-serif;
+  font-weight: 600;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 100vh;
+  font-size: 18px;
+  color: var(--clr-text);
+  margin: 4em 0;
+}
+
+label {
+  color: var(--clr-label);
+  font-size: 12px;
+}
+
+section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.title {
+  width: 100%;
+  font-size: 36px;
+  color: var(--clr-title);
+  margin-bottom: 2em;
+}
+
+.checkout {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  gap: 8rem;
+}
+
+.user__details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 4rem;
+}
+
+.form__control {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  gap: 0.25rem;
+  margin: 0.5em 0;
+}
+
+form img {
+  width: 24px;
+  position: absolute;
+  padding: 16px;
+  padding-top: 2rem;
+}
+
+form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+form input,
+select {
+  border: 1px solid #828282;
+  padding: 16px;
+  padding-left: 3rem;
+  border-radius: 0.5em;
+  background: #fff;
+  font-size: 18px;
+  width: 90%;
+}
+
+select {
+  color: #828282;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-repeat: no-repeat;
+  background-size: 2em auto;
+  background-position: right 0.25em center;
+  padding-right: 1em;
+  background-image: url("https://static.thenounproject.com/png/3466597-200.png");
+}
+
+#save {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.check {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+  margin: 0.5rem 0;
+}
+
+.w-50 {
+  width: 50%;
+}
+
+.inline {
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1em;
+}
+
+hr {
+  border: 1px solid #bdbdbd;
+  border-top: none;
+  color: transparent;
+  margin: 0.5em 0;
+}
+
+.cart__details {
+  background: var(--clr-card);
+  padding: 0 2em 2em;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  border-radius: 1em;
+}
+
+.cart__details .item {
+  margin: 2em 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1em;
+}
+
+.cart__details .item img {
+  width: 8em;
+  border-radius: 1em;
+}
+
+.cart__details .item__name {
+  color: var(--clr-title);
+}
+
+.cart__details .item .price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1em;
+  margin: 0.25em 0 1em;
+}
+
+.cart__details .item .price .original_price {
+  color: #F2994A;
+}
+
+.cart__details .item .quantity {
+  padding: 0.75em;
+  border: 1px solid #828282;
+  border-radius: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.cart__details .item .quantity button {
+  all: unset;
+  color: #828282;
+  width: 1.75em;
+  height: 1.75em;
+  border-radius: 4px;
+  text-align: center;
+  background: #E0E0E0;
+}
+
+.cart__details #up {
+  margin-top: 4em;
+}
+
+.cart__details .charges {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.next {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding: 1em 0;
+}
+
+.next button {
+  all: unset;
+  padding: 1em 2em;
+  background: #f2994a;
+  color: #fff;
+  border-radius: 0.5em;
+}
+
+@media (max-width: 768px) {
+  .checkout {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+}
+
+@media (max-width: 400px) {
+  body {
+    font-size: 12px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .title {
+    font-size: 24px;
+  }
+  .checkout {
+    margin: 0 10% 0 0;
+  }
+  form input, select {
+    font-size: 12px;
+  }
+  .inline {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .inline .w-50 {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=style.css.map */

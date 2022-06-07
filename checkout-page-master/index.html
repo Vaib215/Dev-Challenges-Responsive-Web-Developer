@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Checkout Page</title>
+    <link rel="stylesheet" href="style/style.css" />
+  </head>
+  <body>
+    <section>
+      <h1 class="title">Checkout</h1>
+      <div class="checkout">
+        <form>
+          <div class="user__details">
+            <div class="contact__info">
+              <h4>Contact Information</h4>
+              <div class="form__control">
+                <label for="email">E-mail</label>
+                <img src="https://img.icons8.com/material/92/828282/mail.png" />
+                <input
+                  required
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="Enter your email..."
+                />
+              </div>
+              <div class="form__control">
+                <label for="phone">Phone</label>
+                <img
+                  src="https://img.icons8.com/material/92/828282/phone.png"
+                />
+                <input
+                  required
+                  type="number"
+                  name="phone"
+                  id="phone"
+                  placeholder="Enter your phone..."
+                />
+              </div>
+            </div>
+            <div class="shipping__info">
+              <h4>Shipping address</h4>
+              <div class="form__control">
+                <label for="name">Full Name</label>
+                <img
+                  src="https://img.icons8.com/material/92/828282/user-male-circle.png"
+                />
+                <input
+                  required
+                  type="text"
+                  name="name"
+                  id="name"
+                  placeholder="Your name..."
+                />
+              </div>
+              <div class="form__control">
+                <label for="address">Address</label>
+                <img src="https://img.icons8.com/material/92/828282/home.png" />
+                <input
+                  required
+                  type="text"
+                  name="address"
+                  id="address"
+                  placeholder="Your address..."
+                />
+              </div>
+              <div class="form__control">
+                <label for="city">City</label>
+                <img
+                  src="https://img.icons8.com/glyph-neue/92/828282/city.png"
+                />
+                <input
+                  required
+                  type="text"
+                  name="city"
+                  id="city"
+                  placeholder="Your city..."
+                />
+              </div>
+              <div class="inline">
+              <div class="form__control w-50">
+                <label for="country">Country</label>
+                <img src="https://img.icons8.com/material/92/828282/asia.png" />
+                <select name="country" id="country" required>
+                  <option selected>Your country...</option>
+                  <option value="India">India</option>
+                  <option value="China">China</option>
+                  <option value="Pakistan">Pakistan</option>
+                </select>
+              </div>
+              <div class="form__control w-50">
+                <label for="postal">Postal Code</label>
+                <img
+                  src="https://img.icons8.com/material/92/828282/mailbox.png"
+                />
+                <input
+                  type="text"
+                  name="postal"
+                  id="postal"
+                  placeholder="Your postal code..."
+                />
+              </div>
+            </div>
+            <div class="check">
+              <input type="checkbox" name="save" id="save" />
+              <label for="save">Save this information for next time</label>
+            </div>
+            <div class="next">
+            <button type="submit">Continue</button>
+          </div>
+            </div>
+            
+          </div>
+        </form>
+        <div class="cart__details">
+          <div class="item">
+            <img src="./photo1.png" alt="" />
+            <div class="item__details">
+              <div class="item__name">Vintage Backbag</div>
+              <div class="price">
+                <div class="original_price">$54.99</div>
+                <strike>$94.99</strike>
+              </div>
+              <div class="quantity">
+                <button>-</button>
+                <span>1</span>
+                <button>+</button>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <img src="./photo2.png" alt="" />
+            <div class="item__details">
+              <div class="item__name">Levi Shoes</div>
+              <div class="price">
+                <div class="original_price">$74.99</div>
+                <strike>$124.99</strike>
+              </div>
+              <div class="quantity">
+                <button>-</button>
+                <span>1</span>
+                <button>+</button>
+              </div>
+            </div>
+          </div>
+          <hr id="up">
+          <div class="charges">
+            <div class="right">Shipping</div>
+            <div class="left">$19</div>
+          </div>
+          <hr>
+          <div class="charges">
+              <div class="right">Total</div>
+              <div class="left">$148.98</div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
