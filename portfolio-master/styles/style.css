@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+body {
+  background: url("../images/bg.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  padding: 4em 8em;
+  font-family: "Montserrat", sans-serif;
+}
+
+#profile {
+  background: #00000070;
+  -webkit-backdrop-filter: blur(6px);
+          backdrop-filter: blur(6px);
+  color: white;
+  padding: 2em;
+  border-radius: 1em;
+  gap: 2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#profile .left {
+  width: 280px;
+  height: 260px;
+  border-radius: 1em;
+  background: url("../images/profile.jpg");
+  background-size: cover;
+}
+
+#profile .right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#profile .right .details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+
+#profile .right .details .name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#profile .right .details .name * {
+  margin: 0 0 0.25em;
+  font-weight: 600;
+}
+
+#profile .right .details .contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#profile .right .details .contact > span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#profile .right .details .contact > span a {
+  text-decoration: none;
+  color: white;
+}
+
+#profile .right .details .contact .email,
+#profile .right .details .contact .phone {
+  gap: 0.5em;
+  font-weight: 500;
+}
+
+#profile .right .bio {
+  font-weight: 500;
+  font-size: 20px;
+  margin-bottom: 1em;
+  width: 90%;
+}
+
+.gap-half {
+  gap: 0.5em;
+}
+/*# sourceMappingURL=style.css.map */

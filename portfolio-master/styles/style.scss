@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+body {
+  background: url("../images/bg.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  padding: 4em 8em;
+  font-family: "Montserrat", sans-serif;
+}
+
+@mixin flex-row {
+  display: flex;
+}
+
+@mixin flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin space-between {
+  justify-content: space-between;
+  width: 100%;
+}
+
+@mixin aic {
+  align-items: center;
+}
+
+@mixin link-none {
+  text-decoration: none;
+  color: white;
+}
+
+@mixin card {
+  background: #00000070;
+  backdrop-filter: blur(6px);
+  color: white;
+  padding: 2em;
+  border-radius: 1em;
+  gap: 2em;
+}
+
+#profile {
+  @include card;
+  @include flex-row();
+  .left {
+    width: 280px;
+    height: 260px;
+    border-radius: 1em;
+    background: url("../images/profile.jpg");
+    background-size: cover;
+  }
+  .right {
+    @include flex-col();
+    .details {
+      @include flex-row();
+      @include space-between();
+
+      .name {
+        @include flex-col();
+        * {
+          margin: 0 0 0.25em;
+          font-weight: 600;
+        }
+      }
+      .contact {
+        @include flex-col();
+        & > span {
+          @include flex-row();
+          @include aic();
+          a {
+            @include link-none();
+          }
+        }
+        .email,
+        .phone {
+          gap: 0.5em;
+          font-weight: 500;
+        }
+      }
+    }
+    .bio {
+      font-weight: 500;
+      font-size: 20px;
+      margin-bottom: 1em;
+      width: 90%;
+    }
+  }
+}
+
+.gap-half {
+  gap: 0.5em;
+}
