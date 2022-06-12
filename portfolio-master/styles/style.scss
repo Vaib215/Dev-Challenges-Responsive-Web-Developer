@@ -7,10 +7,12 @@ body {
   background-size: cover;
   padding: 4em 8em;
   font-family: "Montserrat", sans-serif;
+  animation: fadeIn 1s ease-in-out;
 }
 
 @mixin flex-row {
   display: flex;
+  flex-direction: row;
 }
 @mixin flex-col {
   display: flex;
@@ -37,6 +39,10 @@ body {
   gap: 2em;
 }
 
+#profile .left, img,p {
+  animation: grow 1s ease-in-out;
+}
+
 main {
   @include flex-col;
   @include space-between;
@@ -46,17 +52,20 @@ main {
 #profile {
   @include card;
   @include flex-row();
+  width: 94%;
   .left {
-    width: 280px;
-    height: 260px;
+    min-width: 300px;
+    height: 250px;
     border-radius: 1em;
+    border: 1px solid white;
     background: url("../images/profile.jpg");
     background-size: cover;
   }
   .right {
     @include flex-col();
     .details {
-      @include flex-row();
+      display: flex;
+      flex-wrap: wrap;
       @include space-between();
 
       .name {
@@ -87,6 +96,17 @@ main {
       font-size: 20px;
       margin-bottom: 1em;
       width: 90%;
+    }
+    .social_links {
+      display: flex;
+      flex-wrap: wrap;
+      @include space-between();
+      a img {
+        width: 3em;
+        height: 3em;
+        margin: 0 0.5em;
+        border-radius: 0.25em;
+      }
     }
   }
 }
@@ -143,6 +163,7 @@ main {
       gap: 1em;
       img {
         border-radius: 1em;
+        border: 1px solid rgb(255, 255, 255);
       }
       .title {
         font-weight: 500;
@@ -173,6 +194,7 @@ main {
       }
       img {
         border-radius: 1em;
+        border: 1px solid rgb(255, 255, 255);
       }
     }
     .blog-down {
@@ -187,7 +209,9 @@ main {
     @include card();
     @include flex-col();
     gap: 1.25em;
-    h2,h3,h5 {
+    h2,
+    h3,
+    h5 {
       margin: 0;
       font-weight: 500;
     }
@@ -198,8 +222,111 @@ main {
       gap: 1em;
       img {
         border-radius: 1em;
+        border: 1px solid rgb(255, 255, 255);
       }
     }
+  }
+}
+
+#projects {
+  @include card();
+  @include flex-col();
+  gap: 1em;
+  h3 {
+    margin: 0;
+    font-weight: 500;
+  }
+  .tags {
+    @include flex-row();
+    gap: 1em;
+    .tag {
+      padding: 0.5em 1em;
+      border-radius: 0.75em;
+      border: 1px solid rgb(255, 255, 255);
+    }
+    .active {
+      color: white;
+      background: rgb(116, 69, 31);
+    }
+  }
+}
+
+#project-cards {
+  @include flex-row();
+  width: 100%;
+  gap: 2em;
+  .project-card {
+    @include card();
+    @include flex-col();
+    gap: 1em;
+    img {
+      border-radius: 1em;
+      border: 1px solid rgb(255, 255, 255);
+      width: 100%;
+    }
+    .project-card-info {
+      @include flex-col();
+      @include space-between();
+      .tags {
+        @include flex-row();
+        margin: 0.5em 0;
+        gap: 1em;
+        .tag {
+          font-weight: 500;
+        }
+      }
+      h3 {
+        margin: 0;
+        font-weight: 600;
+      }
+      .button_wrapper {
+        @include flex-row();
+        gap: 1em;
+        button {
+          all: unset;
+          color: white;
+          background: rgb(116, 69, 31);
+          padding: 0.5em 1em;
+          border-radius: 0.5em;
+          font-size: 18px;
+          cursor: pointer;
+        }
+        .code {
+          background: transparent;
+          border: 1px solid white;
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+#pagination{
+  @include flex-row();
+  gap: 0.5em;
+  justify-content: flex-end;
+  width: 100%;
+  a{
+    display: flex;
+    @include link-none();
+    color: white;
+    font-weight: 500;
+    font-size: 18px;
+    width: 2em;
+    height: 2em;
+    @include aic();
+    justify-content: center;
+    border-radius: 0.25em;
+    border: 1px solid white;
+    cursor: pointer;
+  }
+  a:nth-child(5){
+    border: none;
+    font-weight: 700;
+  }
+  .active {
+    background: rgb(116, 69, 31);
+    color: white;
   }
 }
 
@@ -209,6 +336,24 @@ main {
   }
   to {
     width: var(--percent);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes grow {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
   }
 }
 
@@ -222,4 +367,50 @@ hr {
   background: rgb(255, 255, 255);
   border-radius: 4px;
   margin: 0.25em 0 0.5em;
+}
+
+@media (max-width:900px) {
+  body {
+    padding: 2em;
+  }
+  #profile {
+    @include flex-col();
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 90%;
+    .left{
+      max-width: 18em;
+      max-height: 18em;
+    }
+    .right {
+      gap: 2em;
+      .details{
+        @include flex-col();
+        gap: 2em;
+        .contact {
+          align-items: center;
+          text-align: center;
+        }
+      }
+    }
+  }
+  .group {
+    @include flex-col();
+    .group1 , .group2 {
+      width: 100%;
+    }
+    .group2 #blog .blog-up{
+      @include flex-col();
+    }
+    .group2 #experience .experience {
+      @include flex-col();
+    }
+  }
+  #projects .tags {
+    flex-wrap: wrap;
+  }
+  #project-cards{
+    @include flex-col();
+    }
 }
